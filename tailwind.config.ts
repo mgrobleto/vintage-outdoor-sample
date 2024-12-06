@@ -11,6 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'default-btn' : '#BF8A26',
+        'hover-btn': '#ae7120',
+        'active-btn': '#8b531d',
+        'second-default-btn': '#27CDF2',
+        'second-hover-btn': '#058ab5',
+        'second-active-btn': '#0c6e92'
       },
     },
   },

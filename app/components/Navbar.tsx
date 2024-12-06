@@ -1,11 +1,17 @@
+"use client";
+
+import React, { useState, useEffect, useContext } from "react";
 import Link from "next/link"
+import Image from "next/image"
+
+import { ScrollContext } from "@/utils/scroll-observer";
 
 const Navbar : React.FC = () => {
 
     const links = [
         {
             label: 'Home',
-            path: '#home',
+            path: '#',
         },
         {
             label: 'About us',
@@ -33,23 +39,62 @@ const Navbar : React.FC = () => {
         },
     ]
 
-    return (
-        <div className="bg-transparent xl:flex flex-row w-full h-auto fixed p-10">
-            <div className="logo">
+    const { scrollY } = useContext(ScrollContext)
+    const [activeSection, setActiveSection] = useState<string>('');
 
+    useEffect(() => {
+        const sections = links.map(link => document.getElementById(link.path.replace('#', '')))
+        let currentSection = '';
+
+        sections.forEach((section, index) => {
+            if (section) {
+                const rect = section.getBoundingClientRect();
+                if(rect.top + window.scrollY <= scrollY + window.innerHeight / 2) {
+                    currentSection = links[index].path
+                }
+            }
+        })
+        setActiveSection(currentSection)
+    }, [scrollY, links])
+
+
+    return (
+        <div className="bg-white xl:flex flex-row w-full h-[100px] sticky top-0 p-5 items-center shadow-md z-50">
+            <div className="logo flex items-center px-5 xl:px-10">
+                <Link href='/'>
+                    <Image 
+                        src="/logo2.png"
+                        alt="logo"
+                        width={100}
+                        height={50}
+                        className="object-contain h-auto max-w-full"
+                        /* style={{
+                            backgroundColor: 'yellow'
+                        }} */
+                    />
+                </Link>
             </div>
-            <div className="options w-full flex flex-row items-start justify-between leading-6 text-xs xl:text-lg m-5">
-                {links.map((l,i) => {
-                    return (
-                        <Link
-                            key={i}
-                            href={l.path}
-                            className=""
-                        >
-                            <div className="ml-3 text-base"> {l.label} </div>
-                        </Link>
-                    )
-                })}
+            <div className="navbar-options flex-grow w-full justify-center xl:justify-end mx-20">
+                <div className="options flex flex-row items-center justify-end gap-5 xl:gap-10 leading-6 text-base font-medium xl:text-lg">
+                    {links.map((l,i) => {
+                        return (
+                            <Link
+                                key={i}
+                                href={l.path}
+                                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                                    activeSection === l.path
+                                        ? 'text-white bg-default-btn shadow-lg'
+                                        : 'text-gray-800 hover:text-white hover:bg-default-btn'
+                                }`}
+                                style={{
+                                    margin: 4
+                                }}
+                            >
+                                <div className="mx-2 text-base"> {l.label} </div>
+                            </Link>
+                        )
+                    })}
+                </div>
             </div>
         </div>
     )
