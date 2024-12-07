@@ -19,7 +19,6 @@ interface ServiceCardProps {
 
 
 const ServiceCard: React.FC<ServiceCardProps> = ({title, description, imageUrl, iconref}) => {
-    //const { ScrollY } = useContext(ScrollContext);
     
     return (
         <div className="card group max-w-[600px] h-full flex flex-col justify-between items-start p-6 rounded-3xl bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 shadow-2xl hover:cursor-pointer hover:translate-y-1.5 ease-in-out transition delay-150 duration-200">

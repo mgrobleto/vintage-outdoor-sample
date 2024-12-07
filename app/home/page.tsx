@@ -6,7 +6,6 @@ import { CustomSecondTitle, CustomTitle } from "../components/Title";
 import { PersonalizedButton } from "../components/Button";
 
 const Intro : React.FC = () => {
-    const { scrollY } = useContext(ScrollContext)
 
     return (
        <section

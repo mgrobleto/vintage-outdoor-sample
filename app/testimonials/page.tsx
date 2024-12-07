@@ -44,8 +44,6 @@ const Testimonials : React.FC = () => {
         "Don't just take our word for it-hear from our satisfied clients! We take pride in the strong relationships we've built with our clients, and their feedback speaks to our commitment to excellece." 
     ]
 
-    const { scrollY } = useContext(ScrollContext)
-
     return (
        <section
             id="testimonial"

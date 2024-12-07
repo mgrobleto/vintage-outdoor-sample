@@ -50,8 +50,6 @@ const Blogs : React.FC = () => {
         "Wether you're looking for expert advice, project, inspiration, or updates on our recent work, you'll find it all here. Explore our articles to stay informed and inspired" 
     ]
 
-    const { scrollY } = useContext(ScrollContext)
-
     return (
        <section
             id="blogs"

@@ -15,8 +15,6 @@ const Gallery : React.FC = () => {
     const SLIDE_COUNT = 5
     const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
-    const { scrollY } = useContext(ScrollContext)
-
     const text = [
         "Take a look at our recent projects to see the quality and creativity we bring to every job. Wether it's a beautifully landscape garde or a newly built home, our portfolio showcases the best of what Vintage Outdoor Inc. and Vintage Construction Inc. can offer."
     ]

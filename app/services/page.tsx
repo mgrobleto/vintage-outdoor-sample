@@ -126,8 +126,6 @@ const Services : React.FC = () => {
         },
     }
 
-    const { scrollY } = useContext(ScrollContext)
-
     return (
        <section
             id="services"
