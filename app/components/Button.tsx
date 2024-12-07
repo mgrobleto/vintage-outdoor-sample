@@ -1,4 +1,3 @@
-import { SocialLink } from "@/utils/social-link"
 import Link from "next/link";
 import React from "react"
 
@@ -51,11 +50,11 @@ export const SubmitButton : React.FC<SubmitButton> = ({text, onClick, color, cla
         <button
             type="submit"
             onClick={onClick}
-            className={`group flex flex-row items-center justify-center rounded-3xl p-[15px] shadow-xl font-bold ${classname} transform transition-transform ease-in-out delay-50 duration-500 hover:translate-x-3`}
+            className={`group flex flex-row items-center justify-center rounded-3xl p-[15px] shadow-xl font-bold ${classname}`}
         >
             <div className="div">{text}</div>
             {icon && (
-                <div className="div">{icon}</div>
+                <div className="transform transition-transform ease-in-out delay-50 duration-500 hover:translate-x-3">{icon}</div>
             )}
         </button>
     )

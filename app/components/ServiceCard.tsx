@@ -2,7 +2,6 @@
 
 import React, {useContext} from "react";
 import Image from "next/image";
-import { ScrollContext } from "@/utils/scroll-observer";
 import { PersonalizedButtonWithIcon } from "./Button";
 import { CustomTitle } from "./Title";
 

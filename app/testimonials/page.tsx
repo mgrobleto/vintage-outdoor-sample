@@ -3,12 +3,9 @@
 import Image from "next/image";
 import { ScrollContext } from "@/utils/scroll-observer"
 import { useContext } from "react"
-import { CustomSecondTitle, CustomTitle, Paragraph } from "../components/Title";
+import { CustomTitle, Paragraph } from "../components/Title";
 import Card from "../components/TestimonialCard";
 
-import { MdOutlineHouseSiding } from "react-icons/md";
-import { GiToolbox } from "react-icons/gi";
-import { FaHammer } from "react-icons/fa";
 import { PersonalizedButton } from "../components/Button";
 
  

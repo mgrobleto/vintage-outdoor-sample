@@ -3,10 +3,10 @@
 import Image from "next/image";
 import { ScrollContext } from "@/utils/scroll-observer"
 import React, { useContext } from "react"
-import { CustomSecondTitle, CustomTitle, Paragraph } from "../components/Title";
+import { CustomTitle, Paragraph } from "../components/Title";
 import BlogCard from "../components/BlogCard";
 
-import { PersonalizedButton, PersonalizedButtonWithIcon } from "../components/Button";
+import { PersonalizedButtonWithIcon } from "../components/Button";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { GiRead } from "react-icons/gi";
 

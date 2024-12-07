@@ -1,14 +1,10 @@
 'use client';
 
 import Image from "next/image";
-import { ScrollContext } from "@/utils/scroll-observer"
-import { useContext } from "react"
-import { CustomSecondTitle, CustomTitle, Paragraph } from "../components/Title";
-import { PersonalizedButton, PersonalizedButtonWithIcon } from "../components/Button";
-import { IoIosSearch } from "react-icons/io";
+import { CustomTitle, Paragraph } from "../components/Title";
+import { PersonalizedButton } from "../components/Button";
 
 const About : React.FC = () => {
-    const { scrollY } = useContext(ScrollContext)
 
     const text: string[] = [
         "At Vintage Outdoor Inc., we are passionate about transforming your outdoor spaces into breathtaking landscaping that enhance your lifestyle.",

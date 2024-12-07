@@ -6,7 +6,6 @@ import Gallery from "./gallery/page";
 import Testimonials from "./testimonials/page";
 import Blogs from "./blog/page";
 import ContactUs from "./contact-us/page";
-import Footer from "./components/Footer";
 
 export default function Home() {
   return (

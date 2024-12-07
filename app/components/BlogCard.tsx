@@ -1,10 +1,8 @@
 'use client';
 
-import React, {useContext} from "react";
+import React from "react";
 import Image from "next/image";
-import { PersonalizedButtonWithIcon } from "./Button";
 import { CustomTitle } from "./Title";
-import { FaPlay } from "react-icons/fa";
 
 interface CardProps {
     title: string;

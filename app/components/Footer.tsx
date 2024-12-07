@@ -1,8 +1,6 @@
 import Image from "next/image"
-import { CustomTitle } from "./Title"
 import { Paragraph } from "./Title"
 import { FaEnvelope, FaFacebook, FaLinkedin, FaMapMarkerAlt, FaPhone, FaTwitter, FaWhatsapp } from "react-icons/fa"
-import { link } from "fs"
 import { SocialLink } from "@/utils/social-link"
 import { SubmitButton } from "./Button"
 
