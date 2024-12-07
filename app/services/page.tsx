@@ -1,8 +1,6 @@
 'use client';
 
 import Image from "next/image";
-import { ScrollContext } from "@/utils/scroll-observer"
-import { useContext } from "react"
 import { CustomSecondTitle, CustomTitle } from "../components/Title";
 import ServiceCard from "../components/ServiceCard";
 
@@ -27,20 +25,6 @@ interface Services {
 }
 
 const Services : React.FC = () => {
-
-
-    const servicePhotoLink = [
-        { path: '/images/outdoor/1.jpg'},
-        { path: '/images/outdoor/2.jpg'},
-        { path: '/images/outdoor/3.jpg'},
-        { path: '/images/outdoor/4.jpg'},
-        { path: '/images/outdoor/5.jpg'},
-        { path: '/images/outdoor/6.jpg'},
-        { path: '/images/outdoor/7.jpg'},
-        { path: '/images/outdoor/8.jpg'},
-        { path: '/images/outdoor/9.jpg'},
-        { path: '/images/outdoor/10.jpg'},
-    ]
 
     const services: Services = {
         service1: {

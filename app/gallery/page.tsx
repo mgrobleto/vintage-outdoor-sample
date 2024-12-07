@@ -1,7 +1,5 @@
 'use client';
 
-import { ScrollContext } from "@/utils/scroll-observer"
-import { useContext } from "react"
 import Image from "next/image";
 import { EmblaOptionsType } from "embla-carousel"
 

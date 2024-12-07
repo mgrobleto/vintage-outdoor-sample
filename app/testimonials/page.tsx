@@ -1,8 +1,6 @@
 'use client';
 
 import Image from "next/image";
-import { ScrollContext } from "@/utils/scroll-observer"
-import { useContext } from "react"
 import { CustomTitle, Paragraph } from "../components/Title";
 import Card from "../components/TestimonialCard";
 

@@ -17,7 +17,7 @@ interface SubmitButton {
     icon?: React.ReactElement
 }
 
-export const PersonalizedButton : React.FC<Props> = ({text, href, color, classname, icon}) => {
+export const PersonalizedButton : React.FC<Props> = ({text, href, color, classname}) => {
 
     return (
         <Link href={href} target="_blank" className='mr-4'>
@@ -32,7 +32,7 @@ export const PersonalizedButton : React.FC<Props> = ({text, href, color, classna
     )
 }
 
-export const PersonalizedButtonWithIcon: React.FC<Props> = ({text, href, color, classname, icon}) => {
+export const PersonalizedButtonWithIcon: React.FC<Props> = ({text, href, classname, icon}) => {
     return (
         <Link href={href} target="_blank" className={`group my-1`}>
             <div className={`group min-w-fit min-h-fit flex flex-row items-center justify-center rounded-3xl p-3 shadow-xl font-bold ${classname} hover:translate-x-3 md:transform-none transition ease-in-out delay-50 duration-500`}>
@@ -45,7 +45,7 @@ export const PersonalizedButtonWithIcon: React.FC<Props> = ({text, href, color, 
     )
 }
 
-export const SubmitButton : React.FC<SubmitButton> = ({text, onClick, color, classname, icon}) => {
+export const SubmitButton : React.FC<SubmitButton> = ({text, onClick, classname, icon}) => {
     return (
         <button
             type="submit"

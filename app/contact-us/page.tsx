@@ -80,7 +80,7 @@ const ContactUs : React.FC = () => {
                                     <div className="col-span-full">
                                         <label htmlFor="about" className="block text-sm/6 xl:text-xl font-medium text-gray-900">Message</label>
                                         <div className="mt-2">
-                                            <textarea name="about" id="about" rows="3" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary-color sm:text-sm/6"></textarea>
+                                            <textarea name="about" id="about" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-primary-color sm:text-sm/6"></textarea>
                                         </div>
                                         <p className="mt-3 text-lg text-gray-600 capitalize">Let&#x27;s get in touch</p>
                                         <div className="read-more-btn flex justify-end">
