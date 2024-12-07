@@ -19,7 +19,6 @@ export default function Home() {
         <Testimonials />
         <Blogs />
         <ContactUs />
-        <Footer />
       </ScrollObserver>
     </main>
   );
