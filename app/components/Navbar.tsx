@@ -27,11 +27,15 @@ const Navbar : React.FC = () => {
         },
         {
             label: 'Testimonials',
-            path: '#testimonials',
+            path: '#testimonial',
         },
         {
             label: 'Blog',
-            path: '#blog',
+            path: '#blogs',
+        },
+        {
+            label: 'FAQs',
+            path: '#faqs',
         },
         {
             label: 'Contact us',

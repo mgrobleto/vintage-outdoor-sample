@@ -3,7 +3,7 @@
 import { ScrollContext } from "@/utils/scroll-observer"
 import { useContext } from "react"
 import { CustomSecondTitle, CustomTitle } from "../components/Title";
-import PersonalizedButton from "../components/Button";
+import { PersonalizedButton } from "../components/Button";
 
 const Intro : React.FC = () => {
     const { scrollY } = useContext(ScrollContext)
