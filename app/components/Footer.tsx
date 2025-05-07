@@ -66,7 +66,7 @@ const Footer : React.FC = () => {
                     
                     <div className="social-links flex flex-row space-x-4">
                         {Object.values(socialLinks).map((link, index) => (
-                            <div className="bg-secondary-color p-4 rounded-full hover:translate-y-2 transition ease-in-out delay-150 cursor-pointer">
+                            <div className="bg-secondary-color p-4 rounded-full hover:translate-y-2 transition ease-in-out delay-150 cursor-pointer" key={index}>
                                 <SocialLink
                                     key={index}
                                     href={link.href}
