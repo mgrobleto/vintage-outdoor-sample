@@ -63,7 +63,7 @@ const Navbar : React.FC = () => {
 
 
     return (
-        <div className="bg-white xl:flex flex-row w-full h-[100px] sticky top-0 p-5 items-center shadow-md z-50">
+        <div className="bg-white hidden lg:flex lg:flex-row w-full h-auto xl:h-[100px] sticky top-0 p-5 items-center shadow-md z-50">
             <div className="logo flex items-center px-5 xl:px-10">
                 <Link href='/'>
                     <Image 
@@ -78,8 +78,8 @@ const Navbar : React.FC = () => {
                     />
                 </Link>
             </div>
-            <div className="navbar-options flex-grow w-full justify-center xl:justify-end mx-20">
-                <div className="options flex flex-row items-center justify-end gap-5 xl:gap-10 leading-6 text-base font-medium xl:text-lg">
+            <div className="navbar-options flex-grow w-full justify-center xl:justify-end mr-10">
+                <div className="options flex flex-row items-center justify-end gap-5 xl:gap-0 leading-6 text-base font-medium xl:text-lg">
                     {links.map((l,i) => {
                         return (
                             <Link

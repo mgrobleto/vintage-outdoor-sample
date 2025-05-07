@@ -48,8 +48,8 @@ const Footer : React.FC = () => {
             className="relative py-20 w-full bg-[url('/images/outdoor/2.jpg')] bg-cover bg-center flex justify-center"
         >
             <div className="absolute inset-0 bg-black opacity-80"></div>
-            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20 items-center p-20 text-white w-full">
-                <div className="main-info flex flex-col gap-6 items-center max-w-6xl">
+            <div className="relative grid grid-cols-1 lg:grid-cols-2 md:gap-10 xl:gap-20 items-start p-20 text-white w-full">
+                <div className="main-info flex flex-col gap-6 items-center max-w-fit">
                     <div className="logo">
                         <Image 
                             src='/logo2.png'
@@ -60,21 +60,24 @@ const Footer : React.FC = () => {
                     </div>
                     <Paragraph 
                         text={text} 
-                        classname="text-center mx-auto max-w-md leading-relaxed" 
+                        classname="text-center max-w-md leading-relaxed" 
                         color="#464646"
                     />
-                    <div className="social-links flex space-x-4 bg-secondary-color p-4 rounded-full">
+                    
+                    <div className="social-links flex flex-row space-x-4">
                         {Object.values(socialLinks).map((link, index) => (
-                            <SocialLink
-                                key={index}
-                                href={link.href}
-                                icon={link.icon}
-                                color={link.color}
-                            />
+                            <div className="bg-secondary-color p-4 rounded-full hover:translate-y-2 transition ease-in-out delay-150 cursor-pointer">
+                                <SocialLink
+                                    key={index}
+                                    href={link.href}
+                                    icon={link.icon}
+                                    color={link.color}
+                                />
+                            </div>
                         ))}
                     </div>
                 </div>
-                <div className="company-more-info grid grid-cols-1 md:grid-cols-3 gap-3 items-start">
+                <div className="company-more-info grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-10 items-start">
                     <div className="company-links">
                         <h3 className="text-lg xl:text-2xl font-bold mb-4">Our Company</h3>
                         <ul className="space-y-2">
@@ -98,11 +101,11 @@ const Footer : React.FC = () => {
                     </div>
                     <div className="newsletter">
                         <h3 className="text-lg xl:text-2xl font-bold mb-4">Join Our Newsletter</h3>
-                        <form className="flex flex-col space-y-4 items-start">
-                            <div className="sm:col-span-3">
+                        <form className="flex flex-col md:items-center md:space-x-4 space-y-4 md:space-y-0">
+                            <div className="w-full md:w-auto">
                                     <div className="mt-2">
                                             <div className="flex items-center rounded-xl pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-secondary-color">
-                                                <input type="text" name="username" id="username" className="block w-full grow py-1.5 pl-1 pr-3 text-base bg-transparent text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6" placeholder="Enter your email" />
+                                                <input type="email" name="username" aria-label="Email address" id="username" className="block w-full grow py-1.5 pl-1 pr-3 text-base bg-transparent text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6" placeholder="Enter your email" />
                                             </div>
                                     </div>
                             </div>

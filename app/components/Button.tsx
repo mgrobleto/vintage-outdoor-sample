@@ -50,6 +50,7 @@ export const SubmitButton : React.FC<SubmitButton> = ({text, onClick, classname,
         <button
             type="submit"
             onClick={onClick}
+            aria-label="Subscribe to Newsletter"
             className={`group flex flex-row items-center justify-center rounded-3xl p-[15px] shadow-xl font-bold ${classname}`}
         >
             <div className="div">{text}</div>

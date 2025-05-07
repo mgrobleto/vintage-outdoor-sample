@@ -19,10 +19,12 @@ export const SocialLink : React.FC<LinksProps> = ({ href, icon, color ,children,
             /* onMouseEnter={(e) => e.currentTarget.style.color = color}
             onMouseLeave={(e) => e.currentTarget.style.color = 'white'} */
             >
-                <div className={`mr-3 ${classname}`}>{icon}</div>
-                <div className='font-semibol' style={{
-                    color: color
-                }}> {children} </div>
+                <div className={`${children ? 'mr-3' : ''} ${classname}`}>{icon}</div>
+                {children && (
+                    <div className='font-semibol' style={{
+                        color: color
+                    }}> {children} </div>
+                )}
             </div>
         </Link>
     )
